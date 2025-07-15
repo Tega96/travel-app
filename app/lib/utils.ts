@@ -2,6 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import dayjs from "dayjs";
 
+// Take the static and the dynamic classNames
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
