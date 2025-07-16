@@ -1,4 +1,4 @@
-//ts-none
+// @ts-nocheck
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 import { Link } from 'react-router'
 import NavItems from './NavItems';
@@ -6,7 +6,7 @@ import NavItems from './NavItems';
 function MobileSidebar() {
     let sidebar: SidebarComponent
 
-    function toggleClick() {
+    function toggleSidebar() {
         sidebar.toggle();
     }
 
@@ -17,7 +17,7 @@ function MobileSidebar() {
                     <img src="/assets/icons/logo.svg" alt="logo" className="size-[30px]" />
                     <h2>Tourvisto</h2>
                 </Link>
-                <button onClick={toggleClick}>
+                <button onClick={toggleSidebar}>
                     <img src="/assets/icons/menu.svg" alt="menu" className="size-7" />
                 </button>
             </header>
@@ -30,7 +30,7 @@ function MobileSidebar() {
                 showBackdrop={true}
                 type="over"
             >
-                <NavItems />
+                <NavItems handleClick={toggleSidebar} />
             </SidebarComponent>
         </div>
     );
